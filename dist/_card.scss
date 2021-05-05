@@ -1,0 +1,120 @@
+.card{
+
+    &__container{
+        @include breakpoint-down(small){
+
+            position: absolute;
+            margin-top: 4.6875rem; 
+            margin-left: 1.5rem;
+            margin-bottom: 4.6875rem;
+            margin-right: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 48.6875rem;
+            width: 20.4375rem;
+        }
+        @include breakpoint-up(large){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row-reverse;
+            height: 27.875rem;
+            width: 69.375rem;
+        }
+    }
+
+    &__infocontainer{
+        background-color: $Darkdesaturatedblue;
+        position: relative;
+        height: 33.75rem;
+        width: 20.4375rem;
+        display: flex;
+        flex-direction: row;
+
+        @include breakpoint-up(large){
+            height: 27.875rem;
+            width: 35.625rem;
+        }
+    }
+    &__info{
+        position: absolute;
+        padding-top: 2.6875rem;
+        padding-left: 2.0625rem;
+        height: 13.875rem;
+        width: 16.4375rem;
+        text-align: center;
+        h1{
+            font-size: 28px;
+        }
+        p{
+            margin-top: 18px;
+        }
+
+        @include breakpoint-up(large){
+            position: absolute;
+            padding-top: 4.75rem;
+            padding-left: 4.5625rem;
+            height: 19.1875rem;
+            width: 23.625rem;
+            text-align: start;
+            h1{
+                font-size: 36px;
+            }
+            p{
+                margin-top: 29px;
+            }
+        }
+    }
+
+    &__img{
+        background : url("../images/image-header-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 14.9375rem;
+        width: 20.4375rem;
+
+        @include breakpoint-up(large){
+            background : url("../images/image-header-desktop.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            height: 27.875rem;
+            width: 33.75rem;
+        }
+    }
+
+    &__colorOverlay{
+        width: 100%;
+        height: 100%;
+        background: $Softviolet;
+        opacity: 0.3;
+    }
+    &__stats{
+        margin-top: 294px;
+        width: 20.4375rem;
+        text-align: center;
+        h1{
+            font-size: 20px;
+        }
+        p{
+            margin-top: 5px;
+        }
+        
+        @include breakpoint-up(large){
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 21.6875rem;
+            padding-left: 4.5625rem;
+            text-align: start;
+
+            h2{
+                font-size: 25px;
+            }
+        }
+    }
+}
